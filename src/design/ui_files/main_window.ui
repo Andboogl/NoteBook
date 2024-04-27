@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NoteBook</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="delete_all_notes">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>781</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Видалити всі нонатки</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="version">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>400</y>
+      <width>381</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Andale Mono</family>
+      <pointsize>40</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Версія 0.0.0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_note">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>391</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Видалити нонатку</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_note">
+    <property name="geometry">
+     <rect>
+      <x>413</x>
+      <y>280</y>
+      <width>381</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Відкрити нонатку</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="notes">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="create_note">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>781</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Створити нонатку</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
