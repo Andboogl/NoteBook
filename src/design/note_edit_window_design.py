@@ -30,7 +30,7 @@ class NoteEditWindowDesign(object):
 
         self.retranslateUi(mainWindow)
         QtCore.QMetaObject.connectSlotsByName(mainWindow)
-        logger.info(f'Дизайн вікна редагування нонатки завантажено у {mainWindow}')
+        logger.success(f'Дизайн вікна редагування нонатки завантажено у {mainWindow}')
 
     def retranslateUi(self, mainWindow):
         _translate = QtCore.QCoreApplication.translate

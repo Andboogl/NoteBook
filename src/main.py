@@ -1,34 +1,30 @@
-"""Основний модуль. Запускає программу"""
+"""Головний файл. Запускає программу"""
 
 
+from sys import argv
 from PyQt6.QtWidgets import QApplication
 from loguru import logger
-from main_window import MainWindow
-from datetime import datetime
-from os.path import expanduser, join
-from sys import argv
+from windows.main_window import MainWindow
+from paths import LOG_FILE_PATH
 
 
-APP_VERSION = '0.0.0'  # Версія программи
+VERSION = '0.1.0'
 
 
-# Налаштування логгера
-logger.add(
-    sink=join(expanduser('~'),
-              '.NoteBook', 'logs',
-              f'{datetime.now().strftime("%d.%m.%Y")}.log')
-)
-logger.debug('Тестовий лог (логгер налаштований)')
-
-
-def main() -> None:
-    """Ця функція запускає додаток"""
+def main_window():
+    """
+    Ця функція створює цикл программи QApplication
+    та відкриває головне вікно программи
+    """
     app = QApplication(argv)
-    main_window = MainWindow()
-    main_window.design.version.setText(f'Версія {APP_VERSION}')
-    main_window.show()
+    main_win = MainWindow()
+    main_win.design.version.setText(f"Версія {VERSION}")
+    main_win.show()
     app.exec()
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    # Налаштування логерра
+    logger.add(sink=LOG_FILE_PATH)
+    logger.success("Логгер успішно налаштований")
+    main_window()  # Запуск программи

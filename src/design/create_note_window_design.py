@@ -28,7 +28,7 @@ class CreateNoteWindowDesign(object):
 
         self.retranslateUi(mainWindow)
         QtCore.QMetaObject.connectSlotsByName(mainWindow)
-        logger.info(f'Дизайн вікна створення нонатки завантажено у {mainWindow}')
+        logger.success(f'Дизайн вікна створення нонатки завантажено у {mainWindow}')
 
     def retranslateUi(self, mainWindow):
         _translate = QtCore.QCoreApplication.translate
